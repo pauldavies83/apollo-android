@@ -1,0 +1,10 @@
+mutation NewAnswer ($input: AnswerInput!) {
+    create_answer(input:$input) {
+        id
+        answer_text
+        study_id
+        participant_id
+        created_at
+        updated_at
+    }
+}

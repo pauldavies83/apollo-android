@@ -1,0 +1,21 @@
+type Query {
+  random: Int
+}
+
+type Mutation {
+  create_answer(input: AnswerInput!): Answer
+}
+
+type Answer {
+  id: String!
+  answer_text: String!
+  study_id: String!
+  participant_id: String!
+  created_at: String!
+  updated_at: String!
+}
+
+input AnswerInput {
+  id: String!
+  text: String!
+}
