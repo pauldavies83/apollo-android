@@ -192,6 +192,7 @@ class CodegenTest(private val folder: File, private val testLanguage: TestLangua
     fun data() =  File("src/test/graphql/com/example/")
           .listFiles()!!
           .filter { it.isDirectory }
+          .filter { it.name.contains("java8") }
           .let {
             it.map {
               arrayOf(it, TestLanguage.Kotlin)
